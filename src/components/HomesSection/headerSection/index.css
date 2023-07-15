@@ -1,0 +1,35 @@
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1510px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.header {
+  background: rgb(110, 110, 240);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu-list__item {
+  color: white;
+  text-decoration: none;
+}
+
+.header__bt {
+  background: rgb(27, 167, 27);
+  border-radius: 20px;
+  border: none;
+  padding: 5px 15px;
+  color: white;
+  cursor: pointer;
+}

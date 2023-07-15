@@ -1,13 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
+import DetailsCard from './components/moviesSectionInfo/detailsCardMovie';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import './pages/App.css'
+import './components/HomesSection/headerSection/index.css'
+import './components/HomesSection/filterContent/index.css'
+import './components/HomesSection/mainComponents/index.css'
+import './components/HomesSection/pagination/index.css'
+import './components/HomesSection/movies/index.css'
+import './components/moviesSectionInfo/detailsCardMovie/index.css'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "details/:detailsId",
+    element: <DetailsCard />,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
